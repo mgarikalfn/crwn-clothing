@@ -19,6 +19,8 @@ const SignUp = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, comformPassword } = formFields;
 
+ 
+
   console.log(formFields);
 
   const handleChange = (event) => {
@@ -41,6 +43,8 @@ const SignUp = () => {
         email,
         password
       );
+
+      
 
       await createUserDocumentationFromAuth(user, { displayName });
       resetFormFields();
